@@ -1,0 +1,753 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e74c3c;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url("https://images.unsplash.com/photo-1601758125946-7ec4f9f2c3d0?auto=format&fit=crop&w=1920&q=80")
+    center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/3149169.jpg");
+  margin-top: 80px; /* Adjust if your navbar is a different height */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Mission Section */
+.mission {
+  padding: 5rem 10%;
+  background-color: #f9f9f9;
+}
+
+.mission-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.mission p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.mission-image {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+  position: relative;
+  width: 500px;
+  height: 320px;
+  overflow: hidden;
+  margin: 2rem auto 0 auto;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Pickles Grid */
+.pickles-grid {
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.pickles-grid h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pickle-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pickle-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pickle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pickle-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pickle-card:hover img {
+  transform: scale(1.05);
+}
+
+.pickle-info {
+  padding: 1.5rem;
+  color: #2c3e50;
+}
+
+.pickle-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.pickle-info p {
+  margin: 0 0 1rem 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+.add-to-cart {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #34495e;
+}
+
+.add-to-cart:active {
+  transform: scale(0.98);
+}
+
+/* Donate Section */
+.donate {
+  padding: 5rem 10%;
+  background-color: #f9f9f9;
+}
+
+.donate-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.swish-qr {
+  width: 200px;
+  height: 200px;
+  margin: 1rem 0;
+}
+
+.donate-button {
+  padding: 1rem 2rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #c0392b;
+}
+
+/* Feedback Section */
+.feedback {
+  padding: 5rem 10%;
+  background-color: white;
+}
+
+.feedback-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feedback-card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.rating {
+  color: #f1c40f;
+}
+
+.feedback-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.feedback-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.rating-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #f1c40f;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #e74c3c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .mission,
+  .donate,
+  .feedback {
+    padding: 3rem 5%;
+  }
+
+  .pickles-grid {
+    padding: 3rem 5%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.mission-content,
+.pickle-card,
+.feedback-card {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Add to Cart Button Styles */
+.add-to-cart {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #34495e;
+}
+
+.add-to-cart:active {
+  transform: scale(0.98);
+}
+
+/* Price Styles */
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+/* Feedback Form Styles */
+.feedback-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h3 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.feedback-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.feedback-form button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.feedback-form button:hover {
+  background-color: #34495e;
+}
+
+/* Rating Input Styles */
+.rating-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rating-input span {
+  margin-right: 10px;
+  color: #2c3e50;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.stars span {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.stars span:hover {
+  transform: scale(1.2);
+}
+
+/* Feedback Card Styles */
+.feedback-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-2px);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.user-info h4 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.rating {
+  color: #f1c40f;
+  margin-top: 5px;
+}
+
+.feedback-text {
+  color: #666;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pickle Card Hover Effects */
+.pickle-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pickle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pickle-card img {
+  transition: transform 0.3s ease;
+}
+
+.pickle-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Donation Button Styles */
+.donate-button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+}
+
+.donate-button:hover {
+  background-color: #219a52;
+}
+
+/* Social Links Hover Effects */
+.social-links a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  color: #27ae60;
+}
+
+/* Swish QR Code Styles */
+.swish-qr {
+  max-width: 200px;
+  border-radius: 8px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+  .pickle-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .feedback-form {
+    padding: 1rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #2c3e50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+/* Success Message Styles */
+.success-message {
+  background-color: #27ae60;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
